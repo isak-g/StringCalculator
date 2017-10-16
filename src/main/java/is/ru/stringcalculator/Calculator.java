@@ -30,9 +30,15 @@ public class Calculator{
 		for(String number : numbers)
 		{
 			int currNumber = toInt(number);
+
  			if(currNumber < 0){
  				throw new IllegalArgumentException("Negatives not allowed: " + currNumber);
 			}
+			if (currNumber > 1000) 
+			{
+				continue;
+			}
+
 			total += toInt(number);
 		}
 		return total;
